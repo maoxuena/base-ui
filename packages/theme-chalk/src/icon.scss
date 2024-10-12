@@ -1,0 +1,128 @@
+@use './mixins/mixins.scss' as *;
+@font-face {
+  font-family: 'base-ui-icons';
+
+  src: url('./fonts/iconfont.woff2') format('woff2'),
+  url('./fonts/iconfont.woff') format('woff'),
+  url('./fonts/iconfont.ttf') format('truetype');
+}
+[class^='#{$namespace}-icon'],
+[class*='#{$namespace}-icon'] {
+  font-family: 'base-ui-icons' !important;
+  font-size: 16px;
+  font-style: normal;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.#{$namespace}-icon-error:before {
+  content: '\e669';
+}
+.#{$namespace}-icon-error-fill:before {
+  content: '\e66a';
+}
+.#{$namespace}-icon-delete:before {
+  content: '\e64d';
+}
+.#{$namespace}-icon-collect:before {
+  content: '\e64e';
+}
+.#{$namespace}-icon-delete-fill:before {
+  content: '\e64f';
+}
+.#{$namespace}-icon-info-fill:before {
+  content: '\e650';
+}
+.#{$namespace}-icon-collect-fill:before {
+  content: '\e651';
+}
+.#{$namespace}-icon-forward-fill:before {
+  content: '\e652';
+}
+.#{$namespace}-icon-info:before {
+  content: '\e653';
+}
+.#{$namespace}-icon-forward:before {
+  content: '\e654';
+}
+.#{$namespace}-icon-help-fill:before {
+  content: '\e655';
+}
+.#{$namespace}-icon-location:before {
+  content: '\e656';
+}
+.#{$namespace}-icon-appreciate:before {
+  content: '\e657';
+}
+.#{$namespace}-icon-location-fill:before {
+  content: '\e658';
+}
+.#{$namespace}-icon-round-close-fill:before {
+  content: '\e659';
+}
+.#{$namespace}-icon-question:before {
+  content: '\e65a';
+}
+.#{$namespace}-icon-more:before {
+  content: '\e65b';
+}
+.#{$namespace}-icon-comment:before {
+  content: '\e65c';
+}
+.#{$namespace}-icon-like-fill:before {
+  content: '\e65d';
+}
+.#{$namespace}-icon-round-close:before {
+  content: '\e65e';
+}
+.#{$namespace}-icon-share:before {
+  content: '\e65f';
+}
+.#{$namespace}-icon-like:before {
+  content: '\e660';
+}
+.#{$namespace}-icon-appreciate-fill:before {
+  content: '\e661';
+}
+.#{$namespace}-icon-warn:before {
+  content: '\e662';
+}
+.#{$namespace}-icon-more_android:before {
+  content: '\e663';
+}
+.#{$namespace}-icon-search:before {
+  content: '\e664';
+}
+.#{$namespace}-icon-camera-fill:before {
+  content: '\e665';
+}
+.#{$namespace}-icon-camera:before {
+  content: '\e666';
+}
+.#{$namespace}-icon-warn-fill:before {
+  content: '\e667';
+}
+.#{$namespace}-icon-comment-fill:before {
+  content: '\e668';
+}
+.#{$namespace}-icon-loading:before {
+  content: '\e64c';
+}
+.#{$namespace}-icon-right:before {
+  content: '\e64b';
+}
+.#{$namespace}-icon-left:before {
+  content: '\e646';
+}
+.#{$namespace}-icon-down:before {
+  content: '\e647';
+}
+.#{$namespace}-icon-thumbs-up:before {
+  content: '\e648';
+}
+.#{$namespace}-icon-settings:before {
+  content: '\e649';
+}
+.#{$namespace}-icon-download:before {
+  content: '\e64a';
+}
