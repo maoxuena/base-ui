@@ -2,7 +2,7 @@
  * @Author: maoxuena
  * @Date: 2024-10-12 09:54:17
  * @LastEditors: maoxuena
- * @LastEditTime: 2024-10-12 13:47:55
+ * @LastEditTime: 2024-10-16 13:56:27
  * @FilePath: \base-ui\play\app.vue
  * @Description: 
 -->
@@ -21,14 +21,20 @@
       <b-icon :color="iconColor" :size="iconSize" class="b-icon-info" />
       <b-icon :color="iconColor" :size="iconSize" class="b-icon-info-fill" />
     </section>
+    <p>button测试</p>    
+    <section class="section-wrap">
+      <b-button size="large" type="primary">large primary 按钮</b-button>
+      <b-button size="small" type="success">small success 按钮</b-button>
+      <b-button type="warning">default warning 按钮</b-button>
+    </section>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref } from 'vue'
 
-const iconColor=ref('#da0a4d');
-const iconSize=ref(20);
+const iconColor=ref('#da0a4d')
+const iconSize = ref(20)
 
 </script>
 

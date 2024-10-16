@@ -6,7 +6,7 @@
  * @FilePath: \base-ui\packages\utils\gulpfile.ts
  * @Description: 
  */
-import { buildPackages } from "../../build/packages"
+import { buildPackages } from '../../build/packages'
 
 
 export default buildPackages(__dirname,'utils')

@@ -5,8 +5,8 @@
 </template>
 
 <script setup>
-import { computed } from "vue"
-import { iconProps } from "./icon"
+import { computed } from 'vue'
+import { iconProps } from './icon'
 
 defineOptions({
   name: 'BIcon',
@@ -15,7 +15,6 @@ defineOptions({
 const props = defineProps(iconProps)
 
 const style = computed(() => {
-  console.log(props)
   if(!props.size && !props.color){
     return {}
   }

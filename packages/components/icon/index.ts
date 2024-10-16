@@ -6,8 +6,8 @@
  * @FilePath: \base-ui\packages\components\icon\index.ts
  * @Description:
  */
-import { withInstall } from "@base-ui/utils"
-import Icon from "./src/icon.vue"
+import { withInstall } from '@base-ui/utils'
+import Icon from './src/icon.vue'
 
 const BIcon = withInstall(Icon)
 

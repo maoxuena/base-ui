@@ -1,0 +1,59 @@
+.b-btn {
+  box-sizing: border-box;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+  cursor: pointer;
+  span {
+    display: inline-block;
+  }
+}
+.b-btn + .b-btn {
+  margin-left: 5px;
+}
+.b-btn-default {
+  background-color: #fff;
+}
+.b-btn-primary {
+  border-color: #18a0e6;
+  color: #fff;
+  background-color: #18a0e6;
+}
+.b-btn-success {
+  border-color: #58e407;
+  color: #fff;
+  background-color: #58e407;
+}
+.b-btn-warning {
+  border-color: #f6b708;
+  color: #fff;
+  background-color: #f6b708;
+}
+.b-btn-info {
+  border-color: #18a0e6;
+  color: #fff;
+  background-color: #18a0e6;
+}
+.b-btn-danger {
+  border-color: #e61818;
+  color: #fff;
+  background-color: #e61818;
+}
+.b-btn-text {
+  border-color: transparent;
+  background-color: #fff;
+}
+.b-btn-medium {
+  padding: 0 20px;
+  height: 32px;
+  line-height: 32px;
+}
+.b-btn-large {
+  padding: 0 25px;
+  height: 36px;
+  line-height: 36px;
+}
+.b-btn-small {
+  padding: 0 10px;
+  height: 24px;
+  line-height: 24px;
+}
