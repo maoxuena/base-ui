@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-button type="primary">主要按钮</el-button>
+    <b-button size="large" type="primary">large primary 按钮</b-button>
   </div>
 </template>
 

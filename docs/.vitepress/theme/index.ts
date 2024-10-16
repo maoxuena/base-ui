@@ -1,7 +1,7 @@
 import { h } from 'vue'
 import { useData } from 'vitepress'
 import DefaultTheme from "vitepress/theme"
-import {BIcon} from "@base-ui/components"
+import {BIcon, BButton} from "@base-ui/components"
 import "@base-ui/theme-chalk/src/index.scss"
 import { globals } from '../vitepress'
 
@@ -26,6 +26,7 @@ export default {
   },
   enhanceApp: async ({ app, router, siteData }) => {
     app.use(BIcon)
+    app.use(BButton)
     app.use(ElementPlus)
     // 全局引入vp-demo组件
     globals.forEach(([name, Comp]) => {
