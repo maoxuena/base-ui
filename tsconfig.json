@@ -23,7 +23,6 @@
   },
   "exclude": [ // 排除掉哪些类库
     "node_modules",
-    "**/__tests__",
-    "base-ui/**"
+    "**/__tests__"
   ]
 }

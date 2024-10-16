@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "@types/markdown-it": "^12.2.3",
+    "@types/markdown-it-container": "^2.0.10",
+    "markdown-it": "^13.0.1",
+    "markdown-it-container": "^3.0.0",
+    "vitepress": "^1.4.1"
+  },
+  "dependencies": {
+    "@vueuse/core": "^11.1.0",
+    "element-plus": "^2.8.5"
+  }
+}

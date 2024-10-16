@@ -1,0 +1,75 @@
+@use './mixins' as *;
+// css variables
+:root {
+  --border-color: var(--el-border-color);
+  --font-family: var(--el-font-family);
+
+  --bg-brand-color: var(--el-color-primary-light-9);
+  --bg-color: var(--el-bg-color);
+  --bg-color-mute: #f2f2f2;
+  --bg-color-rgb: 255, 255, 255;
+  --bg-color-soft: #fafafa;
+  // tip block
+  --block-tip-bg-color: rgba(var(--el-color-primary-rgb), .1);
+  --block-warning-bg-color: rgba(var(--el-color-danger-rgb), .1);
+  --border-color-light: var(--el-border-color-lighter);
+  --brand-color: var(--el-color-primary);
+  --brand-color-light: var(--el-color-primary-light-1);
+  --code-bg-color: var(--el-fill-color-light);
+  --code-font-family: var(--font-family-mono);
+  --code-font-size: var(--el-font-size-base);
+  // --dropdown-z-index: 22;
+  // code block vars
+  --code-line-height: 1.4;
+  --code-text-color: var(--text-color);
+  --content-max-width: 48rem;
+  --content-min-width: 16rem;
+  --danger-color: var(--el-color-danger);
+  --font-family-mono: 'JetBrains Mono', source-code-pro, Menlo, Monaco, Consolas,
+  'Courier New', monospace;
+  // header vars
+  --header-height: 55px;
+  @include respond-to('xxl') {
+    --vp-sidebar-width-small: 234px;
+  }
+  @include respond-to('max') {
+    --vp-screen-max-width: 1482px;
+    --vp-sidebar-width-small: 290px;
+  }
+  & {
+    // link
+    --link-active-bg-color: rgba(#409eff, .1);
+    --nav-height: 55px; // alias of --header-height
+    --nav-z-index: 11;
+    --overlay-z-index: 30;
+    --sidebar-width-sm: 16rem;
+    --sidebar-width-xs: 20rem;
+    --sidebar-z-index: 40;
+    --sub-nav-z-index: 11;
+    // info
+    --success-color: var(--el-color-success);
+    // colors
+    --text-color: var(--el-text-color-primary);
+    --text-color-light: var(--el-text-color-regular);
+    --text-color-lighter: var(--el-text-color-secondary);
+    --vp-c-brand: #646cff;
+    --vp-c-brand-dark: #535bf2;
+    --vp-c-brand-darker: #454ce1;
+    --vp-c-brand-light: #747bff;
+    --vp-c-brand-lighter: #9499ff;
+    --vp-c-brand-lightest: #bcc0ff;
+    // layouts
+    --vp-screen-max-width: 1376px;
+    /* Screen Size */
+    --vp-screen-max-width: 1362px;
+    // sidebar
+    --vp-sidebar-width-mobile: 320px;
+    --vp-sidebar-width-small: 266px;
+    --warning-color: var(--el-color-warning);
+  }
+}
+.dark {
+  --bg-color-mute: #2c2c2c;
+  --bg-color-rgb: 0, 0, 0;
+  --bg-color-soft: #242424;
+}

@@ -2,6 +2,9 @@
   "private": true,
   "scripts": {
     "build": "gulp -f build/gulpfile.ts",
+    "docs:dev": "pnpm -C docs dev",
+    "docs:build": "pnpm -C docs build",
+    "docs:preview": "pnpm -C docs preview",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
