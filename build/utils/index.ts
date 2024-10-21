@@ -10,10 +10,11 @@
  */
 import { spawn } from "child_process";
 import { projectRoot } from "./paths";
+import { TaskFunction } from "gulp";
 
 // 自定义每个task的name
-export const withTaskName = <T>(name: string, fn: T) =>
-  Object.assign(fn, { displayName: name });
+export const withTaskName = <T extends TaskFunction>(name: string, fn: T) =>
+  Object.assign(fn, { displayName: name })
 
 // 在node中开启一个子进程来运行脚本
 export const run = async (command: string) => {
@@ -28,4 +29,13 @@ export const run = async (command: string) => {
     // 在进程已结束并且子进程的标准输入输出流已关闭之后，则触发 'close' 事件
     app.on("close", resolve); //
   });
+};
+
+// 重写打包后的@base-ui 路径
+export const pathRewriter = (format) => {
+  return (file: string) => {
+    console.log('重写打包后的@base-ui 路径', file);
+    file = file.replace("@base-ui", `base-ui/${format}`);
+    return file;
+  };
 };
