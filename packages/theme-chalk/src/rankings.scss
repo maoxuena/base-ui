@@ -1,0 +1,199 @@
+.b-rank-wrap {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid #002c54;
+  border-radius: 5px;
+  padding: 20px;
+  width: 600px;
+  background: rgba(0,25,48,.8);
+
+  $fontColor: #bfe0ff;
+  $rowHeight: 50px;
+  @mixin lineBox {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    content: '';
+  }
+  &::before {
+    top: 0;
+    background: linear-gradient(to right,transparent,rgba(3, 141, 255, .6) 20%,transparent);
+
+    @include lineBox;
+  }
+  &::after {
+    bottom: 0;
+    background: linear-gradient(to right,transparent,rgba(3, 141, 255, .6) 60%,transparent);
+
+    @include lineBox;
+  }
+  @keyframes animationShiny {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: .4;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .b-rank-title {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    position: relative;
+    margin-bottom: 15px;
+    width: 100%;
+    .b-rank-title-icon {
+      border-radius: 2px;
+      width: 5px;
+      height: 12px;
+      background: #007bf1;
+      box-shadow: 0 0 4px #0a5d83;
+    }
+    h2 {
+      flex-grow: 1;
+      margin: 0;
+      padding: 0 10px;
+      width: 0;
+      font-size: 14px;
+      color: $fontColor;
+
+      filter: drop-shadow(1px 2px 2px #2c2c2c);
+    }
+    .b-rank-dot {
+      display: flex;
+      align-items: center;
+      margin-top: -10px;
+      margin-right: 5px;
+
+      -webkit-perspective: 150;
+              perspective: 150;
+      i {
+        margin: 0 1px;
+        border: 1px solid #030304;
+        border-radius: 2px;
+        width: 4px;
+        height: 8px;
+        background: #409cff;
+        transform: rotateZ(29deg);
+        animation: animationShiny 1s var(--index) linear infinite;
+        &:nth-child(3) {
+          background: #1ce17d;
+        }
+      }
+    }
+  }
+  * {
+    box-sizing: border-box;
+  }
+  .b-rank-list {
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-direction: column;
+    width: 100%;
+    height: $rowHeight*5;
+  }
+  .b-rank-row {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 0 10px;
+    width: 100%;
+    height: $rowHeight;
+    cursor: pointer;
+    > span {
+      flex-shrink: 0;
+      font-size: 14px;
+      color: $fontColor;
+    }
+  }
+  .b-rank-icon {
+    border-radius: 2px;
+    width: 25px;
+    height: 20px;
+    font-size: 12px !important;
+    line-height: 20px;
+    text-align: center;
+    color: #fff !important;
+  }
+  .b-rank-info {
+    overflow: hidden;
+    flex-grow: 1;
+    padding: 0 80px 0 20px;
+    width: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .b-rank-value {
+    padding-right: 10px;
+    transition: 200ms linear;
+  }
+  // style1
+  .b-rank-style1 {
+    position: relative;
+    border-radius: 5px;
+    background: linear-gradient(to right,transparent,rgba(2,59,137,.1),transparent);
+
+    $colors: (
+    #f4a33a,
+    #7f9eb6,
+    #e26431,
+    #1e499b,
+    );
+    &:hover {
+      background: linear-gradient(to right,rgba(1, 140, 255, .2),transparent);
+      .b-rank-value {
+        padding-right: 20px;
+        color: #f4a33a;
+      }
+    }
+    &::before {
+      display: block;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(to right,transparent,rgba(8, 61, 103,1),transparent);
+      content: '';
+    }
+    &:last-child {
+      &::after {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(to right,transparent,rgba(8, 61, 103,1),transparent);
+        content: '';
+      }
+    }
+    .b-rank-icon {
+      background: nth($colors, 4);
+      transform: skew(-10deg);
+    }
+    &:nth-child(1) {
+      .b-rank-icon {
+        background: nth($colors, 1);
+        transform: skew(-10deg);
+      }
+    }
+    &:nth-child(2) {
+      .b-rank-icon {
+        background: nth($colors, 2);
+        transform: skew(-10deg);
+      }
+    }
+    &:nth-child(3) {
+      .b-rank-icon {
+        background: nth($colors, 3);
+        transform: skew(-10deg);
+      }
+    }
+  }
+}
